@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getDownloadURL, ref } from 'firebase/storage'; 
 import { storage } from '../app/firebaseConfig'; 
 
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = 'https://sewarappserverside.onrender.com/api';
 
 
 //sending request to the server 

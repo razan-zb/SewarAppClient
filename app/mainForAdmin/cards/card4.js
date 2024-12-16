@@ -71,10 +71,6 @@ const MainForClient = () => {
         const downloadURL = await sendImageFirebase(formData);
   
         if (downloadURL) {
-          console.log("yes1")
-          const theUser = JSON.parse(await AsyncStorage.getItem('user'));
-          console.log(downloadURL.url)
-          console.log(imageId)
           theUser.miroPhotos[imageId] = downloadURL.url;
           await AsyncStorage.setItem('user', JSON.stringify(theUser));
           await changeData();
@@ -183,11 +179,6 @@ const MainForClient = () => {
       }));
       setItem2(temps)
       
-      const temps2 = theUser.miroPhotos.map((photoUrl, index) => {
-        console.log(photoUrl); // Logs the photo URL
-        return { url: photoUrl, index: index }; // Returns an object for each element
-      });
-
       const tempsForVideos = theUser.miroVideos.map((videoUrl, index) => ({
         id: (index).toString(),
         src: videoUrl,
