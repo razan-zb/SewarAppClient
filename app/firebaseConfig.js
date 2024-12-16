@@ -10,7 +10,6 @@ const firebaseConfig = {
   storageBucket: "sewarproject-7bc35.appspot.com",
   messagingSenderId: "678152537682",
   appId: "1:678152537682:android:7f26d7c9165343d2d7018b",
-  measurementId: "YOUR_MEASUREMENT_ID"
 };
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();

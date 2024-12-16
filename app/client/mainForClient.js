@@ -38,6 +38,7 @@ const MainForClient = () => {
         id: (index + 1).toString(),
         src: photoUrl,
       }));
+
       setItem2(temps)
 
       const tempsForVideos = theUser.miroVideos.map((videoUrl, index) => ({
